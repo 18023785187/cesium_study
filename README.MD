@@ -31,6 +31,7 @@
     <li>ellipsoid(EllipsoidGraphics) 球</li>
     <li>plane(PlaneGraphics) 平面</li>
     <li>cylinder(CylinderGraphics) 圆锥</li>
+    <li>model(ModelGraphics) 模型</li>
     CallbackProperty
     <li>用于动画的api</li>
 </ul>

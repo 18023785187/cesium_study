@@ -5,6 +5,8 @@ import 'cesium/Source/Widgets/widgets.css'
 // const viewer = new Cesium.Viewer('viewer')
 
 // 案例
+// import('./case/创建/普通的地球')
+// import('./case/创建/纯粹的地球')
 // import('./case/数据源/GeoJson和TopoJson')
 // import('./case/数据源/Wmst')
 // import('./case/标记/地图别针')
@@ -16,7 +18,7 @@ import 'cesium/Source/Widgets/widgets.css'
 // import('./case/功能/飞行结束执行动画')
 // import('./case/功能/视频投影')
 // import('./case/功能/贴图为地球皮肤')
-import('./case/功能/显示与隐藏实体')
+// import('./case/功能/显示与隐藏实体')
 // import('./case/几何形状/画一条线')
 // import('./case/几何形状/各种线')
 // import('./case/几何形状/走廊')
@@ -24,6 +26,7 @@ import('./case/功能/显示与隐藏实体')
 // import('./case/几何形状/圆与椭圆')
 // import('./case/几何形状/圆锥与圆柱')
 // import('./case/几何形状/各种球')
+import('./case/3D模型/创建模型')
 
 // 测试
 // import 'test/testClickButton'
