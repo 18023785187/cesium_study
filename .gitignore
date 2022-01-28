@@ -5,6 +5,7 @@
 /.pnp
 .pnp.js
 /dist
+/dll
 
 # testing
 /coverage
