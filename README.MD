@@ -1,4 +1,5 @@
 <h1>Cesium框架学习</h1>
+<p>案例使用的语言是Typescript, 目的是为了更好地在学习期间找出错误</p>
 <p>案例文件在src/case文件夹中, 在src/index.ts中导入即可(注意：需要使用import(path)导入，因为设定按钮容器会在同步代码的最后执行生成)</p>
 <p>在src/assets/image中可以查看对应案例的效果图</p>
 
@@ -22,15 +23,19 @@
 <h4>常用的api(不全)</h4>
 <ul>
     Entity
+    <li>viewer.entities.add 添加图层</li>
     <li>billboard(BillboardGraphics) 放置地图别针</li>
     <li>label(LabelGraphics) 放置标签</li>
-    <li>viewer.entities.add 添加图层</li>
+    <li>polygon(PolygonGraphics) 多边形</li>
     <li>polyline(PolylineGraphics) 线</li>
     <li>corridor(CorridorGraphics) 走廊</li>
     <li>ellipse(EllipseGraphics) 圆</li>
     <li>ellipsoid(EllipsoidGraphics) 球</li>
     <li>plane(PlaneGraphics) 平面</li>
+    <li>box(BoxGraphics) 盒子</li>
     <li>cylinder(CylinderGraphics) 圆锥</li>
+    <li>polylineVolume(PolylineVolumeGraphics) 折线体</li>
+    <li>wall(WallGraphics) 墙体</li>
     <li>model(ModelGraphics) 模型</li>
     CallbackProperty
     <li>用于动画的api</li>
