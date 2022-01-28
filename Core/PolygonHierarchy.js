@@ -1,0 +1,1 @@
+import defined from"./defined.js";function PolygonHierarchy(e,i){this.positions=defined(e)?e:[],this.holes=defined(i)?i:[]}export default PolygonHierarchy;

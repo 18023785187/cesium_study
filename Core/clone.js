@@ -1,0 +1,1 @@
+import defaultValue from"./defaultValue.js";function clone(e,r){if(null===e||"object"!=typeof e)return e;r=defaultValue(r,!1);var t=new e.constructor;for(var o in e)if(e.hasOwnProperty(o)){var l=e[o];r&&(l=clone(l,r)),t[o]=l}return t}export default clone;

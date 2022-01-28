@@ -1,0 +1,1 @@
+import Check from"./Check.js";var dataUriRegex=/^data:/i;function isDataUri(t){return Check.typeOf.string("uri",t),dataUriRegex.test(t)}export default isDataUri;

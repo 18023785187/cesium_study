@@ -1,0 +1,1 @@
+import defaultValue from"./defaultValue.js";function Interval(t,a){this.start=defaultValue(t,0),this.stop=defaultValue(a,0)}export default Interval;

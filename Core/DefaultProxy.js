@@ -1,0 +1,1 @@
+function DefaultProxy(t){this.proxy=t}DefaultProxy.prototype.getURL=function(t){var o=-1===this.proxy.indexOf("?")?"?":"";return this.proxy+o+encodeURIComponent(t)};export default DefaultProxy;

@@ -1,0 +1,1 @@
+var HeightmapEncoding={NONE:0,LERC:1};export default Object.freeze(HeightmapEncoding);

@@ -1,0 +1,1 @@
+var ExtrapolationType={NONE:0,HOLD:1,EXTRAPOLATE:2};export default Object.freeze(ExtrapolationType);

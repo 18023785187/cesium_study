@@ -1,0 +1,1 @@
+var getTimestamp;getTimestamp="undefined"!=typeof performance&&"function"==typeof performance.now&&isFinite(performance.now())?function(){return performance.now()}:function(){return Date.now()};export default getTimestamp;

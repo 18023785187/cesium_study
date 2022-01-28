@@ -1,0 +1,1 @@
+import when from"../ThirdParty/when.js";function loadAndExecuteScript(e){var r=when.defer(),n=document.createElement("script");n.async=!0,n.src=e;var o=document.getElementsByTagName("head")[0];return n.onload=function(){n.onload=void 0,o.removeChild(n),r.resolve()},n.onerror=function(e){r.reject(e)},o.appendChild(n),r.promise}export default loadAndExecuteScript;

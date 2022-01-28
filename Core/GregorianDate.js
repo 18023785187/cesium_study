@@ -1,0 +1,1 @@
+function GregorianDate(i,t,e,s,h,n,o,a){this.year=i,this.month=t,this.day=e,this.hour=s,this.minute=h,this.second=n,this.millisecond=o,this.isLeapSecond=a}export default GregorianDate;

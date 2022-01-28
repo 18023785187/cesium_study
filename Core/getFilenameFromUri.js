@@ -1,0 +1,1 @@
+import Uri from"../ThirdParty/Uri.js";import defined from"./defined.js";import DeveloperError from"./DeveloperError.js";function getFilenameFromUri(r){if(!defined(r))throw new DeveloperError("uri is required.");var e=new Uri(r);e.normalize();var i=e.path(),o=i.lastIndexOf("/");return-1!==o&&(i=i.substr(o+1)),i}export default getFilenameFromUri;

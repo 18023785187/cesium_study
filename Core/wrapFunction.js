@@ -1,0 +1,1 @@
+import DeveloperError from"./DeveloperError.js";function wrapFunction(o,r,e){if("function"!=typeof r)throw new DeveloperError("oldFunction is required to be a function.");if("function"!=typeof e)throw new DeveloperError("oldFunction is required to be a function.");return function(){e.apply(o,arguments),r.apply(o,arguments)}}export default wrapFunction;

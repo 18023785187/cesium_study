@@ -1,0 +1,1 @@
+function EarthOrientationParametersSample(t,e,a,i,r){this.xPoleWander=t,this.yPoleWander=e,this.xPoleOffset=a,this.yPoleOffset=i,this.ut1MinusUtc=r}export default EarthOrientationParametersSample;

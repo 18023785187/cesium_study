@@ -1,0 +1,1 @@
+import defined from"./defined.js";function formatError(e){var r,d=e.name,n=e.message;r=defined(d)&&defined(n)?d+": "+n:e.toString();var f=e.stack;return defined(f)&&(r+="\n"+f),r}export default formatError;

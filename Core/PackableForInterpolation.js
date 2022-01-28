@@ -1,0 +1,1 @@
+import DeveloperError from"./DeveloperError.js";var PackableForInterpolation={packedInterpolationLength:void 0,convertPackedArrayForInterpolation:DeveloperError.throwInstantiationError,unpackInterpolationResult:DeveloperError.throwInstantiationError};export default PackableForInterpolation;

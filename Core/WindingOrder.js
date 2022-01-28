@@ -1,0 +1,1 @@
+import WebGLConstants from"./WebGLConstants.js";var WindingOrder={CLOCKWISE:WebGLConstants.CW,COUNTER_CLOCKWISE:WebGLConstants.CCW,validate:function(n){return n===WindingOrder.CLOCKWISE||n===WindingOrder.COUNTER_CLOCKWISE}};export default Object.freeze(WindingOrder);

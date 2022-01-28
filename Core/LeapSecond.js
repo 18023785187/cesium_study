@@ -1,0 +1,1 @@
+function LeapSecond(e,t){this.julianDate=e,this.offset=t}export default LeapSecond;

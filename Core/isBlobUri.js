@@ -1,0 +1,1 @@
+import Check from"./Check.js";var blobUriRegex=/^blob:/i;function isBlobUri(e){return Check.typeOf.string("uri",e),blobUriRegex.test(e)}export default isBlobUri;

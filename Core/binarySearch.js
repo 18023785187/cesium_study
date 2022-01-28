@@ -1,0 +1,1 @@
+import Check from"./Check.js";function binarySearch(e,r,i){Check.defined("array",e),Check.defined("itemToFind",r),Check.defined("comparator",i);for(var n,a,c=0,f=e.length-1;c<=f;)if((a=i(e[n=~~((c+f)/2)],r))<0)c=n+1;else{if(!(a>0))return n;f=n-1}return~(f+1)}export default binarySearch;

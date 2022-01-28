@@ -1,0 +1,1 @@
+function appendForwardSlash(a){return 0!==a.length&&"/"===a[a.length-1]||(a+="/"),a}export default appendForwardSlash;

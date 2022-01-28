@@ -1,0 +1,1 @@
+var ReferenceFrame={FIXED:0,INERTIAL:1};export default Object.freeze(ReferenceFrame);

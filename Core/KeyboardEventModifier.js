@@ -1,0 +1,1 @@
+var KeyboardEventModifier={SHIFT:0,CTRL:1,ALT:2};export default Object.freeze(KeyboardEventModifier);

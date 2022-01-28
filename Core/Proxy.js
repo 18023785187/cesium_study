@@ -1,0 +1,1 @@
+import DeveloperError from"./DeveloperError.js";function Proxy(){DeveloperError.throwInstantiationError()}Proxy.prototype.getURL=DeveloperError.throwInstantiationError;export default Proxy;

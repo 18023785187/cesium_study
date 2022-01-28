@@ -1,0 +1,1 @@
+import defined from"./defined.js";var a;function isCrossOriginUrl(r){defined(a)||(a=document.createElement("a")),a.href=window.location.href;var e=a.host,o=a.protocol;return a.href=r,a.href=a.href,o!==a.protocol||e!==a.host}export default isCrossOriginUrl;

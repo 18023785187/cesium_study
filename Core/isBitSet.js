@@ -1,0 +1,1 @@
+function isBitSet(t,e){return 0!=(t&e)}export default isBitSet;

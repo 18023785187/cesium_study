@@ -1,0 +1,1 @@
+function parseResponseHeaders(r){var e={};if(!r)return e;for(var s=r.split("\r\n"),n=0;n<s.length;++n){var a=s[n],t=a.indexOf(": ");if(t>0){var i=a.substring(0,t),f=a.substring(t+2);e[i]=f}}return e}export default parseResponseHeaders;

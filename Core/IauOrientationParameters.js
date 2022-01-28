@@ -1,0 +1,1 @@
+function IauOrientationParameters(t,i,a,n){this.rightAscension=t,this.declination=i,this.rotation=a,this.rotationRate=n}export default IauOrientationParameters;

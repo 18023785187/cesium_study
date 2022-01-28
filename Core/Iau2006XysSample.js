@@ -1,0 +1,1 @@
+function Iau2006XysSample(s,t,a){this.x=s,this.y=t,this.s=a}export default Iau2006XysSample;

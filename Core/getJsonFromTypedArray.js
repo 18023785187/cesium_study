@@ -1,0 +1,1 @@
+import getStringFromTypedArray from"./getStringFromTypedArray.js";function getJsonFromTypedArray(r,e,t){return JSON.parse(getStringFromTypedArray(r,e,t))}export default getJsonFromTypedArray;

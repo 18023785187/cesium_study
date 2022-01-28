@@ -1,0 +1,1 @@
+var TimeStandard={UTC:0,TAI:1};export default Object.freeze(TimeStandard);

@@ -1,0 +1,1 @@
+import defaultValue from"./defaultValue.js";import getStringFromTypedArray from"./getStringFromTypedArray.js";function getMagic(r,t){return t=defaultValue(t,0),getStringFromTypedArray(r,t,Math.min(4,r.length))}export default getMagic;

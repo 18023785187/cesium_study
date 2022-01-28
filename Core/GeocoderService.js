@@ -1,0 +1,1 @@
+import DeveloperError from"./DeveloperError.js";function GeocoderService(){}GeocoderService.prototype.geocode=DeveloperError.throwInstantiationError;export default GeocoderService;

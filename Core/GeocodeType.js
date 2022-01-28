@@ -1,0 +1,1 @@
+var GeocodeType={SEARCH:0,AUTOCOMPLETE:1};export default Object.freeze(GeocodeType);

@@ -1,0 +1,1 @@
+var TerrainQuantization={NONE:0,BITS12:1};export default Object.freeze(TerrainQuantization);

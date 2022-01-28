@@ -1,0 +1,1 @@
+function defaultValue(e,u){return null!=e?e:u}defaultValue.EMPTY_OBJECT=Object.freeze({});export default defaultValue;

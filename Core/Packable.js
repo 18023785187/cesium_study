@@ -1,0 +1,1 @@
+import DeveloperError from"./DeveloperError.js";var Packable={packedLength:void 0,pack:DeveloperError.throwInstantiationError,unpack:DeveloperError.throwInstantiationError};export default Packable;

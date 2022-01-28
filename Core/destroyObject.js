@@ -1,0 +1,1 @@
+import defaultValue from"./defaultValue.js";import DeveloperError from"./DeveloperError.js";function returnTrue(){return!0}function destroyObject(e,r){function o(){throw new DeveloperError(r)}for(var t in r=defaultValue(r,"This object was destroyed, i.e., destroy() was called."),e)"function"==typeof e[t]&&(e[t]=o);e.isDestroyed=returnTrue}export default destroyObject;

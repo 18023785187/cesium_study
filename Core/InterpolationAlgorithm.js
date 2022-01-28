@@ -1,0 +1,1 @@
+import DeveloperError from"./DeveloperError.js";var InterpolationAlgorithm={type:void 0};InterpolationAlgorithm.getRequiredDataPoints=DeveloperError.throwInstantiationError,InterpolationAlgorithm.interpolateOrderZero=DeveloperError.throwInstantiationError,InterpolationAlgorithm.interpolate=DeveloperError.throwInstantiationError;export default InterpolationAlgorithm;

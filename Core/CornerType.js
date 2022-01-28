@@ -1,0 +1,1 @@
+var CornerType={ROUNDED:0,MITERED:1,BEVELED:2};export default Object.freeze(CornerType);

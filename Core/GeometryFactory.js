@@ -1,0 +1,1 @@
+import DeveloperError from"../Core/DeveloperError.js";function GeometryFactory(){DeveloperError.throwInstantiationError()}GeometryFactory.createGeometry=function(r){DeveloperError.throwInstantiationError()};export default GeometryFactory;

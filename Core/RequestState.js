@@ -1,0 +1,1 @@
+var RequestState={UNISSUED:0,ISSUED:1,ACTIVE:2,RECEIVED:3,CANCELLED:4,FAILED:5};export default Object.freeze(RequestState);
