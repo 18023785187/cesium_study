@@ -43,21 +43,21 @@ $ npm run build
     <strong>Entity</strong>
     <li>viewer.entities.add 添加图层</li>
 
-    ```javascript
-        {
-            id: 唯一标志,
-            name: 名称,
-            availability: 可用性,
-            show: 可见性,
-            description: 描述,
-            position: 位置,
-            orientation: 方向,
-            viewFrom: 查看此对象的初始偏移量,
-            parent: 父节点,
-            properties: 与此实体关联的任意属性,
-            相关的形状: 在以下列表中罗列（共15种）
-        }
-    ```
+```javascript
+    const options = {
+        id: 唯一标志,
+        name: 名称,
+        availability: 可用性,
+        show: 可见性,
+        description: 描述,
+        position: 位置,
+        orientation: 方向,
+        viewFrom: 查看此对象的初始偏移量,
+        parent: 父节点,
+        properties: 与此实体关联的任意属性,
+        相关的形状: 在以下列表中罗列（共15种）
+    }
+```
 
     <li>point(PointGraphics) 点</li>
     <li>billboard(BillboardGraphics) 放置地图别针</li>
