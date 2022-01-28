@@ -1,13 +1,19 @@
 <h1>Cesium框架案例</h1>
 
 # 启动本地服务
+
+```javascript
 $ git clone https://github.com/18023785187/cesium_study.git
 $ npm install
 $ npm run dll
 $ npm run dev
+```
 
-#打包
+# 打包
+
+```javascript
 $ npm run build
+```
 
     注意：在打包前请在cesium.config.ts -> window.CESIUM_BASE_URL中更改资源根目录
 
@@ -36,6 +42,24 @@ $ npm run build
 <ul>
     <strong>Entity</strong>
     <li>viewer.entities.add 添加图层</li>
+
+    ```javascript
+        {
+            id: 唯一标志,
+            name: 名称,
+            availability: 可用性,
+            show: 可见性,
+            description: 描述,
+            position: 位置,
+            orientation: 方向,
+            viewFrom: 查看此对象的初始偏移量,
+            parent: 父节点,
+            properties: 与此实体关联的任意属性,
+            相关的形状: 在以下列表中罗列（共15种）
+        }
+    ```
+
+    <li>point(PointGraphics) 点</li>
     <li>billboard(BillboardGraphics) 放置地图别针</li>
     <li>label(LabelGraphics) 放置标签</li>
     <li>polygon(PolygonGraphics) 多边形</li>
