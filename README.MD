@@ -21,8 +21,13 @@ $ npm run build
 <p>案例文件在src/case文件夹中, 在src/index.ts中导入即可(注意：需要使用import(path)导入，因为设定按钮容器会在同步代码的最后执行生成)</p>
 <p>在src/assets/image中可以查看对应案例的效果图</p>
 
+<h4>个人主页</h4>
+<p><a href="https://cesium.com/ion/assetdepot/">个人主页</a></p>
+<p>你可以在个人主页存放或添加一些资源用于你的Cesium项目</p>
+
 <h4>学习资料</h4>
-<p><a href="https://cesium.com/learn/">Cesium官方文档</a></p>
+<p><a href="https://cesium.com/learn/">Cesium 官方文档</a></p>
+<p><a href="https://cesium.com/learn/cesiumjs-learn/cesiumjs-flight-tracker/"></a>CesiumJS 教程</p>
 <p><a href="https://cesium.com/learn/cesiumjs/ref-doc/">Cesium Api英文文档</a></p>
 <p><a href="http://cesium.xin/cesium/cn/Documentation1.62/">Cesium Api中文文档</a></p>
 <p><a href="https://sandcastle.cesium.com/">Cesium 案例</a></p>

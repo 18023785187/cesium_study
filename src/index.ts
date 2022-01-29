@@ -5,6 +5,7 @@ import 'cesium/Source/Widgets/widgets.css'
 // 案例
 // import('./case/创建/普通的地球')
 // import('./case/创建/纯粹的地球')
+import('./case/创建/使用资源')
 
 // import('./case/数据源/GeoJson和TopoJson')
 // import('./case/数据源/Wmst')
@@ -17,6 +18,7 @@ import 'cesium/Source/Widgets/widgets.css'
 // import('./case/功能/按距离显示')
 // import('./case/功能/贴图为地球皮肤')
 // import('./case/功能/显示与隐藏实体')
+// import('./case/功能/3D瓦砖功能样式')
 
 // import('./case/材质/颜色')
 // import('./case/材质/图片')
@@ -24,7 +26,7 @@ import 'cesium/Source/Widgets/widgets.css'
 // import('./case/材质/条纹')
 // import('./case/材质/网格')
 // import('./case/材质/发光的线')
-import('./case/材质/带轮廓的线')
+// import('./case/材质/带轮廓的线')
 
 // import('./case/标记/地图别针')
 // import('./case/标记/标签')
