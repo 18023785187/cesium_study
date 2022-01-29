@@ -15,7 +15,9 @@ const Destination: IDestination = {
     // 罗定
     LUO_DING: [111.56, 22.77],
     // 广州塔
-    GUANG_ZHOU_TA: [113.31915, 23.10902]
+    GUANG_ZHOU_TA: [113.31915, 23.10902],
+    // 珠穆朗玛峰
+    EVEREST: [86.934165,27.990458]
 }
 
 export default Destination

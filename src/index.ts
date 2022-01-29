@@ -5,11 +5,14 @@ import 'cesium/Source/Widgets/widgets.css'
 // import('./case/创建/普通的地球')
 // import('./case/创建/纯粹的地球')
 // import('./case/创建/使用资源')
+// import('./case/创建/生成建筑物')
+// import('./case/创建/地形')
+
+import('./case/相机/飞到一个位置')
 
 // import('./case/数据源/GeoJson和TopoJson')
 // import('./case/数据源/Wmst')
 
-// import('./case/功能/生成建筑物')
 // import('./case/功能/动态时间')
 // import('./case/功能/CallbackProperty')
 // import('./case/功能/飞行结束执行动画')
@@ -18,7 +21,7 @@ import 'cesium/Source/Widgets/widgets.css'
 // import('./case/功能/贴图为地球皮肤')
 // import('./case/功能/显示与隐藏实体')
 // import('./case/功能/3D瓦砖功能样式')
-import('./case/功能/构建飞行跟踪器')
+// import('./case/功能/构建飞行跟踪器')
 
 // import('./case/材质/颜色')
 // import('./case/材质/图片')

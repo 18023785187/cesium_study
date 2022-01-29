@@ -21,6 +21,7 @@ $ npm run build
 <p>案例使用的语言是Typescript, 目的是为了更好地在学习期间找出错误</p>
 <p>案例尽可能较多地添加详细的注释，方便读者理解</p>
 <p>案例文件在src/case文件夹中, 在src/index.ts中导入即可(注意：需要使用import(path)导入，因为设定按钮容器会在同步代码的最后执行生成)</p>
+<p>在案例大纲中会有一些api的描述文件，写这些描述文件的初衷是对比官方网址的api更加简洁</p>
 <p>在src/assets/image中可以查看对应案例的效果图</p>
 
 <h4>创建Cesium个人主页</h4>
@@ -34,6 +35,10 @@ $ npm run build
 <p><a href="http://cesium.xin/cesium/cn/Documentation1.62/">Cesium Api中文文档</a></p>
 <p><a href="https://sandcastle.cesium.com/">Cesium 案例</a></p>
 <p><a href="http://cesium.xin/">Cesium 中文教学</a></p>
+
+<h4>帮助工具</h4>
+<p><a href="https://www.toolnb.com/tools/gps.html">经纬度查询</a></p>
+<p><a href="http://datav.aliyun.com/portal/school/atlas/area_selector">GeoJson获取</a></p>
 
 <h4>常用的api(不全)</h4>
 <ul>
