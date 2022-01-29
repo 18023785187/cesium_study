@@ -6,6 +6,8 @@
  *  
  * 案例演示：
  *  如何创建3D模型
+ *  模型可以在自己的资源中加载，也可以使用IonResource.fromAssetId({ AssetId })异步加载，
+ *  IonResource.fromAssetId用法请看 src/case/创建/使用资源
  */
 import { Viewer, Cartesian3, Transforms, HeadingPitchRoll, Math, Quaternion, Entity } from 'cesium'
 import { ClickButton } from 'utils'

@@ -3,8 +3,14 @@
  */
 import Destination from './destination'
 import GeoJson from './geoJson'
+import { flightData } from './data'
+import type { flightDataPointType } from './data'
 
 export {
     Destination,
-    GeoJson
+    GeoJson,
+    flightData
+}
+export type {
+    flightDataPointType
 }
