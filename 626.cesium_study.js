@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkcesium_study=self.webpackChunkcesium_study||[]).push([[626],{7626:function(e,u,s){s.r(u);var t=s(7521);u.default=function(){var e=new t.CesiumWidget("viewer");return function(){e.destroy()}}}}]);
