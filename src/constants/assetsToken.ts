@@ -1,0 +1,4 @@
+/**
+ * 令牌
+ */
+export default 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI4NjhkNzVmYy1kNmQ0LTQzZDktOWQxOS1lMGQ4ZTZmZGVlZjkiLCJpZCI6ODEwNjAsImlhdCI6MTY0MzQzNTU0Mn0.zuc37nVgdwUHPKvktt1hYnhc4U-C8gBWAEL0RXslXZU'

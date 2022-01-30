@@ -7,8 +7,8 @@
 视锥由6个平面定义。每个平面都由 Cartesian4 对象表示，其中x，y和z分量定义垂直于平面的单位矢量，w分量是从原点/相机位置开始的平面。
 
 <p>这里会罗列出一些相机常用的变量与方法，更多的内容请移步至
-<p><a href="https://cesium.com/learn/cesiumjs/ref-doc/Camera.html?classFilter=Camera">Camera 中文</a></p>
-<p><a href="http://cesium.xin/cesium/cn/Documentation1.62/Camera.html">Camera 英文</a></p>
+<p><a href="https://cesium.com/learn/cesiumjs/ref-doc/Camera.html?classFilter=Camera">Camera 英文</a></p>
+<p><a href="http://cesium.xin/cesium/cn/Documentation1.62/Camera.html">Camera 中文</a></p>
 </p>
 
 ```typescript
@@ -20,18 +20,18 @@ type options = {
         heading?: number, // 航向
         pitch?: number, // 俯仰
         roll?: number, // 横滚
+        /* 还有一些配置项 */
     },
     duration?: number, // 飞行持续时间
     complete?: () => void, // 飞行结束要执行的功能
     cancel?: () => void, // 取消航班时要执行的功能
     maximumHeight?: number, // 相机在飞行中能到达的最大高度
     pitchAdjustHeight?: number, // 如果相机的飞行角度高于该值，请在飞行过程中调整俯仰角度以向下看，并将地球保持在视口中。
+    easingFunction?: EasingFunction, // 设置缓动函数，指定飞行动画的执行机制
     /* 还有一些配置项 */
 }
 
-camera.flyTo(duration) // 将相机飞到主视图。使用 Camera＃.DEFAULT_VIEW_RECTANGLE 进行设置3D场景的默认视图。
+camera.flyHome(duration) // 将相机飞到主视图。使用 Camera＃.DEFAULT_VIEW_RECTANGLE 进行设置3D场景的默认视图。
 type duration = number // 飞行的持续时间
-
-
 
 ```

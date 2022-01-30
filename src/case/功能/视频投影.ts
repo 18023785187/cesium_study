@@ -10,7 +10,17 @@
  *  如何将元素投影到cesium中
  *  将球体进行分片
  */
-import { Viewer, Cartesian3, Rectangle, defined, VideoSynchronizer, CallbackProperty, JulianDate, Cartesian2 } from 'cesium'
+import {
+    Viewer,
+    Cartesian3,
+    Rectangle,
+    defined,
+    VideoSynchronizer,
+    CallbackProperty,
+    JulianDate,
+    Cartesian2,
+    ImageMaterialProperty
+} from 'cesium'
 import { Destination } from '@/constants'
 import { ClickButton } from 'utils'
 import chinaVideo from 'assets/videos/china.mp4'
@@ -93,7 +103,7 @@ const btn1 = new ClickButton('时钟同步no', () => {
 // 下面演示分片播放， isRepeating = true四个球分片, 否则不分
 let isRepeating: boolean = false
 const btn2 = new ClickButton('分片no', () => {
-    if(btn2.el.textContent === '分片no') {
+    if (btn2.el.textContent === '分片no') {
         btn2.el.textContent = '分片yes'
     } else {
         btn2.el.textContent = '分片no'
@@ -117,10 +127,10 @@ const repeat: CallbackProperty = new CallbackProperty(
     },
     false
 )
-; (sphere1.ellipsoid?.material as any).repeat = repeat
-; (sphere2.ellipsoid?.material as any).repeat = repeat
-; (sphere3.ellipsoid?.material as any).repeat = repeat
-; (sphere4.ellipsoid?.material as any).repeat = repeat
+    ; (sphere1.ellipsoid?.material as ImageMaterialProperty).repeat = repeat
+    ; (sphere2.ellipsoid?.material as ImageMaterialProperty).repeat = repeat
+    ; (sphere3.ellipsoid?.material as ImageMaterialProperty).repeat = repeat
+    ; (sphere4.ellipsoid?.material as ImageMaterialProperty).repeat = repeat
 
 const buttonBox: HTMLDivElement = document.getElementsByClassName('button-box')[0] as HTMLDivElement
 btn1.appendTo(buttonBox)

@@ -33,7 +33,7 @@ import {
     VelocityOrientationProperty,
     LagrangePolynomialApproximation
 } from 'cesium'
-import { flightData } from '@/constants'
+import { FLIGHT_DATA } from '@/constants'
 import type { flightDataPointType } from '@/constants'
 import CesiumAirModel from 'assets/3d_model/Cesium_Air.glb'
 
@@ -47,7 +47,7 @@ viewer.scene.primitives.add(osmBuildingsTileset)
 // 定义时间步长为30秒
 const timeStepInSeconds = 30;
 // 定义航班的持续时间（该时间由雷达个数 * 步长得出）
-const totalSeconds = timeStepInSeconds * (flightData.length - 1);
+const totalSeconds = timeStepInSeconds * (FLIGHT_DATA.length - 1);
 // 定义航班的开始时间
 const start = JulianDate.fromIso8601("2020-03-09T23:10:00Z");
 // 定义航班结束的时间，该时间是开始时间加上总长
@@ -72,8 +72,8 @@ positionProperty.setInterpolationOptions({
     interpolationAlgorithm: LagrangePolynomialApproximation,
 })
 // Step2 创建雷达点
-for (let i = 0; i < flightData.length; ++i) {
-    const dataPoint: flightDataPointType = flightData[i]
+for (let i = 0; i < FLIGHT_DATA.length; ++i) {
+    const dataPoint: flightDataPointType = FLIGHT_DATA[i]
     // 到达该点的时间戳
     const time = JulianDate.addSeconds(start, i * timeStepInSeconds, new JulianDate());
     // 雷达的位置

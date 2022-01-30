@@ -5,6 +5,9 @@ interface IDestination {
     [propName: string]: [number, number]
 }
 
+/**
+ * 城市坐标
+ */
 const Destination: IDestination = {
     // 广东
     GUANG_DONG: [113.307755, 23.355569],

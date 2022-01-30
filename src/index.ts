@@ -8,7 +8,12 @@ import 'cesium/Source/Widgets/widgets.css'
 // import('./case/创建/生成建筑物')
 // import('./case/创建/地形')
 
-import('./case/相机/飞到一个位置')
+// import('./case/相机/飞到一个位置')
+// import('./case/相机/打印某个地点的位置')
+// import('./case/相机/飞到指定实体上')
+// import('./case/相机/缓动函数')
+// import('./case/相机/锁定到某个点')
+import('./case/相机/围绕一个点运行')
 
 // import('./case/数据源/GeoJson和TopoJson')
 // import('./case/数据源/Wmst')
