@@ -28,7 +28,6 @@ for (let i = 0; i < navData.length; ++i) {
         const liEl: HTMLLIElement = document.createElement('li')
         liEl.className += ' case-list-item'
         liEl.textContent = curItemData.name
-        liEl._CURRENT_HIGH = curItemData.name
         // 数据初始化时需要使目标导航高亮
         if(curItemData.name === case_token) {
             replace(liEl)
