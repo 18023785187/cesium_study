@@ -15,27 +15,34 @@
 import { Viewer, PolylineOutlineMaterialProperty, Cartesian3, Color } from 'cesium'
 import { Destination } from '@/constants'
 
-const viewer: Viewer = new Viewer('viewer')
+export default () => {
 
-const entity = viewer.entities.add({
-    position: Cartesian3.fromDegrees(...Destination.ZHU_HAI),
-    polyline: {
-        positions: Cartesian3.fromDegreesArray(
-            [
-                ...Destination.ZHU_HAI,
-                ...Destination.GUANG_ZHOU
-            ]
-        ),
-        width: 80
-    }
-})
-// 每500毫秒变换一种颜色的棋盘
-window.setInterval(() => {
-    entity.polyline!.material = new PolylineOutlineMaterialProperty({
-        color: Color.fromRandom(),
-        outlineWidth: 20,
-        outlineColor: Color.fromRandom()
+    const viewer: Viewer = new Viewer('viewer')
+
+    const entity = viewer.entities.add({
+        position: Cartesian3.fromDegrees(...Destination.ZHU_HAI),
+        polyline: {
+            positions: Cartesian3.fromDegreesArray(
+                [
+                    ...Destination.ZHU_HAI,
+                    ...Destination.GUANG_ZHOU
+                ]
+            ),
+            width: 80
+        }
     })
-}, 500)
+    // 每500毫秒变换一种颜色的棋盘
+    window.setInterval(() => {
+        entity.polyline!.material = new PolylineOutlineMaterialProperty({
+            color: Color.fromRandom(),
+            outlineWidth: 20,
+            outlineColor: Color.fromRandom()
+        })
+    }, 500)
 
-viewer.zoomTo(viewer.entities)
+    viewer.zoomTo(viewer.entities)
+
+    return () => {
+        viewer.destroy()
+    }
+}

@@ -1,0 +1,9 @@
+/*
+    app组件的样式
+*/
+@import url('./nav.css');
+@import url('./viewer.css');
+
+#app {
+    display: flex;
+}

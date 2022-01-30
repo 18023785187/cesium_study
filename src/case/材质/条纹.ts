@@ -17,27 +17,34 @@
 import { Viewer, StripeMaterialProperty, Cartesian3, Color, StripeOrientation } from 'cesium'
 import { Destination } from '@/constants'
 
-const viewer: Viewer = new Viewer('viewer')
+export default () => {
 
-const entity = viewer.entities.add({
-    position: Cartesian3.fromDegrees(...Destination.ZHU_HAI),
-    ellipse: {
-        semiMajorAxis: 40000,
-        semiMinorAxis: 25000
-    }
-})
-// 每500毫秒变换一种颜色的棋盘
-window.setInterval(() => {
-    entity.ellipse!.material = new StripeMaterialProperty({
-        // 奇数格的颜色
-        evenColor: Color.fromRandom(),
-        // 偶数格的颜色
-        oddColor: Color.fromRandom(),
-        // 格子重复次数
-        repeat: Math.ceil(Math.random() * 32),
-        // 定义格子是横向还是纵向
-        orientation: Math.floor(Math.random() * 2) ? StripeOrientation.HORIZONTAL : StripeOrientation.VERTICAL,
+    const viewer: Viewer = new Viewer('viewer')
+
+    const entity = viewer.entities.add({
+        position: Cartesian3.fromDegrees(...Destination.ZHU_HAI),
+        ellipse: {
+            semiMajorAxis: 40000,
+            semiMinorAxis: 25000
+        }
     })
-}, 500)
+    // 每500毫秒变换一种颜色的棋盘
+    window.setInterval(() => {
+        entity.ellipse!.material = new StripeMaterialProperty({
+            // 奇数格的颜色
+            evenColor: Color.fromRandom(),
+            // 偶数格的颜色
+            oddColor: Color.fromRandom(),
+            // 格子重复次数
+            repeat: Math.ceil(Math.random() * 32),
+            // 定义格子是横向还是纵向
+            orientation: Math.floor(Math.random() * 2) ? StripeOrientation.HORIZONTAL : StripeOrientation.VERTICAL,
+        })
+    }, 500)
 
-viewer.zoomTo(viewer.entities)
+    viewer.zoomTo(viewer.entities)
+
+    return () => {
+        viewer.destroy()
+    }
+}

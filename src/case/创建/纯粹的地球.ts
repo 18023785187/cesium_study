@@ -9,5 +9,11 @@
  */
 import { CesiumWidget } from 'cesium'
 
-// 创建一个普通地球，可传入两个参数，第一个参数为id选择器或dom，第二个参数为配置对象
-const viewer: CesiumWidget = new CesiumWidget('viewer', /** options */)
+export default () => {
+    // 创建一个普通地球，可传入两个参数，第一个参数为id选择器或dom，第二个参数为配置对象
+    const viewer: CesiumWidget = new CesiumWidget('viewer', /** options */)
+
+    return () => {
+        viewer.destroy()
+    }
+}

@@ -13,23 +13,29 @@
  */
 import { Viewer, Cesium3DTileset, IonResource } from 'cesium'
 
-const viewer: Viewer = new Viewer('viewer')
+export default () => {
+    const viewer: Viewer = new Viewer('viewer')
 
-const tileset = viewer.scene.primitives.add(
-    // 添加一个3D瓦砖
-    new Cesium3DTileset({
-        /**
-         * IonResource 封装cesium离子资产访问的 Resource 实例
-         * fromAssetId 异步创建一个实例
-         * 
-         *  在当前令牌中你可以访问如下AssetId：
-         *      43978 墨尔本点云,
-         *      69380 墨尔本摄影测量,
-         *      793127 AGI_HQ,
-         *      793151 墨尔本_传感器_活动
-         */
-        url: IonResource.fromAssetId(793127),
-    })
-)
+    const tileset = viewer.scene.primitives.add(
+        // 添加一个3D瓦砖
+        new Cesium3DTileset({
+            /**
+             * IonResource 封装cesium离子资产访问的 Resource 实例
+             * fromAssetId 异步创建一个实例
+             * 
+             *  在当前令牌中你可以访问如下AssetId：
+             *      43978 墨尔本点云,
+             *      69380 墨尔本摄影测量,
+             *      793127 AGI_HQ,
+             *      793151 墨尔本_传感器_活动
+             */
+            url: IonResource.fromAssetId(793127),
+        })
+    )
 
-tileset.readyPromise.then(() => viewer.zoomTo(tileset))
+    tileset.readyPromise.then(() => viewer.zoomTo(tileset))
+
+    return () => {
+        viewer.destroy()
+    }
+}

@@ -12,19 +12,26 @@
 import { Viewer, Cartesian3, Color, ColorMaterialProperty } from 'cesium'
 import { Destination } from '@/constants'
 
-const viewer: Viewer = new Viewer('viewer')
+export default () => {
 
-const entity = viewer.entities.add({
-    position: Cartesian3.fromDegrees(...Destination.ZHU_HAI),
-    ellipse: {
-        semiMajorAxis: 40000,
-        semiMinorAxis: 25000
+    const viewer: Viewer = new Viewer('viewer')
+
+    const entity = viewer.entities.add({
+        position: Cartesian3.fromDegrees(...Destination.ZHU_HAI),
+        ellipse: {
+            semiMajorAxis: 40000,
+            semiMinorAxis: 25000
+        }
+    })
+    // 还可以在定义后更改材质
+    window.setInterval(() => {
+        // 每300毫秒改变一次颜色材质
+        return entity.ellipse!.material = new ColorMaterialProperty(Color.fromRandom())
+    }, 300)
+
+    viewer.zoomTo(viewer.entities)
+
+    return () => {
+        viewer.destroy()
     }
-})
-// 还可以在定义后更改材质
-window.setInterval(() => {
-    // 每300毫秒改变一次颜色材质
-    return entity.ellipse!.material = new ColorMaterialProperty(Color.fromRandom())
-}, 300)
-
-viewer.zoomTo(viewer.entities)
+}

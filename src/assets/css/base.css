@@ -1,0 +1,11 @@
+@import url('./App/app.css');
+
+:root {
+    --scrollbar-border: 1px solid #444;
+    --case-list-item-font-size: 14px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}

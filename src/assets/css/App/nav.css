@@ -1,0 +1,54 @@
+/* 导航栏 */
+.app-nav {
+    display: block;
+    min-width: 100px;
+    width: 15vw;
+    height: 100vh;
+    color: #ccc;
+    background-color: rgb(40, 44, 52);
+    overflow-y: scroll;
+}
+
+.app-nav::-webkit-scrollbar {
+    background-color: rgb(40, 44, 52);
+    border: var(--scrollbar-border);
+    box-sizing: border-box;
+}
+
+.app-nav::-webkit-scrollbar-thumb {
+    background-color: rgb(55, 60, 71);
+    border: var(--scrollbar-border);
+    border-top: none;
+    border-bottom: none;
+    box-sizing: border-box;
+}
+
+.app-nav::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(65, 72, 85);
+}
+
+.app-nav-title {
+    padding: 1vh;
+    text-align: center;
+}
+
+/* .case-list {
+    
+} */
+
+.case-list-title {
+    margin-left: 1vw;
+    padding: 1vh 0;
+}
+
+.case-list-item {
+    font-size: var(--case-list-item-font-size);
+    padding: 1vh 0 1vh 3vw;
+    cursor: pointer;
+}
+
+.case-list-item:hover {
+    color: #fff;
+    background-color: red;
+    list-style-type: none;
+}

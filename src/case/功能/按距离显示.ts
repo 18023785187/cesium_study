@@ -14,31 +14,37 @@ import { Viewer, Cartesian3, Color, DistanceDisplayCondition } from 'cesium'
 import { Destination } from '@/constants'
 import CesiumAirModel from 'assets/3d_model/Cesium_Air.glb'
 
-const viewer: Viewer = new Viewer('viewer')
+export default () => {
+    const viewer: Viewer = new Viewer('viewer')
 
-viewer.entities.add({
-    position: Cartesian3.fromDegrees(...Destination.ZHU_HAI),
-    // 定义点
-    point: {
-        // 指定大小为10像素
-        pixelSize: 10,
-        color: Color.YELLOW,
-        // 指定将显示距相机的距离
-        distanceDisplayCondition: new DistanceDisplayCondition(
-            10000
-        )
-    },
-    // 定义模型
-    model: {
-        uri: CesiumAirModel,
-        // 指定将显示距相机的距离
-        distanceDisplayCondition: new DistanceDisplayCondition(
-            0,
-            10000
-        )
+    viewer.entities.add({
+        position: Cartesian3.fromDegrees(...Destination.ZHU_HAI),
+        // 定义点
+        point: {
+            // 指定大小为10像素
+            pixelSize: 10,
+            color: Color.YELLOW,
+            // 指定将显示距相机的距离
+            distanceDisplayCondition: new DistanceDisplayCondition(
+                10000
+            )
+        },
+        // 定义模型
+        model: {
+            uri: CesiumAirModel,
+            // 指定将显示距相机的距离
+            distanceDisplayCondition: new DistanceDisplayCondition(
+                0,
+                10000
+            )
+        }
+    })
+
+    viewer.camera.setView({
+        destination: Cartesian3.fromDegrees(...Destination.ZHU_HAI, 100000)
+    })
+
+    return () => {
+        viewer.destroy()
     }
-})
-
-viewer.camera.setView({
-    destination: Cartesian3.fromDegrees(...Destination.ZHU_HAI, 100000)
-})
+}

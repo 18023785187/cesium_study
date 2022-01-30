@@ -1,0 +1,7 @@
+/* 视图 */
+#viewer {
+    position: relative;
+    flex: 1;
+    width: 85vw;
+    height: 100vh;
+}
