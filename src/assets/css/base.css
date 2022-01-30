@@ -1,8 +1,9 @@
 @import url('./App/app.css');
+@import url('./click_button.css');
 
 :root {
     --scrollbar-border: 1px solid #444;
-    --case-list-item-font-size: 14px;
+    --case-list-item-font-size: 1vw;
 }
 
 * {

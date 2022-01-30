@@ -30,6 +30,7 @@
 .app-nav-title {
     padding: 1vh;
     text-align: center;
+    color: #fff;
 }
 
 /* .case-list {
@@ -37,13 +38,14 @@
 } */
 
 .case-list-title {
-    margin-left: 1vw;
-    padding: 1vh 0;
+    padding: 1vh 1vw;
+    color: #fff;
+    background-color: rgb(33, 37, 43);
 }
 
 .case-list-item {
     font-size: var(--case-list-item-font-size);
-    padding: 1vh 0 1vh 3vw;
+    padding: 1vh 0 1vh 2vw;
     cursor: pointer;
 }
 

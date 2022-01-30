@@ -145,5 +145,7 @@ export default () => {
         viewer.destroy()
         btn1.remove()
         btn2.remove()
+        videoEl.pause()
+        videoEl.remove()
     }
 }

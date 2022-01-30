@@ -18,11 +18,60 @@ $ npm run build
 注意：在打包前请在cesium.config.ts -> window.CESIUM_BASE_URL中更改资源根目录
 
 <h4>说明</h4>
-<p>案例使用的语言是Typescript, 目的是为了更好地在学习期间找出错误</p>
+<p>案例使用的语言是Typescript</p>
 <p>案例尽可能较多地添加详细的注释，方便读者理解</p>
-<p>案例文件在src/case文件夹中, 在src/index.ts中导入即可(注意：需要使用import(path)导入，因为设定按钮容器会在同步代码的最后执行生成)</p>
 <p>在案例大纲中会有一些api的描述文件，写这些描述文件的初衷是对比官方网址的api更加简洁</p>
+<p>在src/assets/case中可以查看对应案例的源码</p>
 <p>在src/assets/image中可以查看对应案例的效果图</p>
+
+# 代码目录
+
+```typescript
+public // 静态文件夹
+
+src: {
+    assets, // 资源文件夹
+    case, // 案例文件夹
+    constants, // 常量数据文件夹
+    test, // 单元测试文件夹
+    ts, // 处理代码文件夹
+    typings, // 声明文件夹
+    utils, // 工具函数文件夹
+    cesium.config.ts, // Cesium配置文件
+    index.ts // 入口文件
+}
+```
+
+# 案例
+
+    在src/assets/case中可以查看对应案例的源码，也可以添加自己写的案例
+
+```typescript
+/*
+    如何扩展案例
+    在src/case 目录下新建一个大纲，如自定义
+    在大纲目录下生成案例文件，如xxx.ts
+
+    下面编写xxx.ts
+*/
+export default () => {
+    /*
+        案例代码
+    */
+
+   return () => {
+       /*
+            销毁时的处理函数
+       */
+   }
+}
+
+/**
+ * 在src/ts/constants.ts 文件下的caseAsyncScriptMap和navData添加配置项，
+ * 具体请前往该文件修改，源码并不复杂
+/
+
+```
 
 <h4>创建Cesium个人主页</h4>
 <p><a href="https://cesium.com/ion/assetdepot/">个人主页</a></p>

@@ -1,0 +1,20 @@
+/**
+ * 点击按钮样式
+ */
+.click-button-item {
+    display: inline-block;
+    line-height: 2vh;
+    padding: .3vh .8vw;
+    margin-right: .5vw;
+    font-size: 1vw;
+    color: #fff;
+    background-color: rgb(48, 51, 54);
+    border: 1px solid #fff;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.click-button-item:hover {
+    color: #fff;
+    background-color: red;
+}

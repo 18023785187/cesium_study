@@ -2,10 +2,14 @@
  * 这是列表控制功能，可以切换case
  * 为nav组件添加内容和功能
  */
-import { navData } from './constants'
+import { navData, caseAsyncScriptMap } from '../constants'
+import { localStorageToken } from '@/constants'
+import destroyPrev from './destroy'
+import replace from './highElHandler'
 
-import helloWorld from '@/case/创建/普通的地球'
-const destroy = { crrent: helloWorld() }
+// 获取上一次案例记录
+const case_token: string = window.localStorage.getItem(localStorageToken.CASE_TOKEN) || '普通的地球'
+caseAsyncScriptMap[case_token]().then((res: any) => destroyPrev(res.default()))
 
 // 获取导航元素
 const navEl: HTMLElement = document.getElementsByClassName('app-nav')[0] as HTMLElement
@@ -19,15 +23,24 @@ for (let i = 0; i < navData.length; ++i) {
     h4El.textContent = title
     ulEl.appendChild(h4El)
     for (let i = 0; i < data.length; ++i) {
+        const curItemData = data[i]
+
         const liEl: HTMLLIElement = document.createElement('li')
         liEl.className += ' case-list-item'
-        liEl.textContent = data[i].name
+        liEl.textContent = curItemData.name
+        liEl._CURRENT_HIGH = curItemData.name
+        // 数据初始化时需要使目标导航高亮
+        if(curItemData.name === case_token) {
+            replace(liEl)
+        }
         liEl.addEventListener('click', () => {
-            const modules: Promise<any> = data[i].default()
+            replace(liEl)
+            const modules: Promise<any> = curItemData.default()
             modules
                 .then((res: any) => {
-                    destroy.crrent()
-                    destroy.crrent = res.default()
+                    window.localStorage.setItem(localStorageToken.CASE_TOKEN, curItemData.name)
+                    // 切换案例，执行前一个案例的销毁函数
+                    destroyPrev(res.default())
                 })
                 .catch((err: any) => {
                     alert('加载失败')

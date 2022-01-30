@@ -1,7 +1,7 @@
 /**
  * 控制器
  */
-import './setNavContent'
+import './navHandler'
 
 // 测试
 // import 'test/testClickButton'
@@ -14,7 +14,7 @@ buttonBox.style.cssText += `
     top: 0;
     left: 0;
     display: flex;
-    margin: 4px 10px;
+    margin: .3vh .8vw;
 `
 buttonBox.className = 'button-box'
 document.getElementById('viewer')!.appendChild(buttonBox)

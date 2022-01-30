@@ -5,17 +5,7 @@ class ClickButton {
     public el: HTMLDivElement
     constructor(text: string, onclick?: () => void) {
         const el = document.createElement('div')
-        el.style.cssText = `
-            display: inline-block;
-            line-height: 18px;
-            padding: 4px 10px;
-            margin-right: 10px;
-            color: #fff;
-            background-color: rgb(48, 51, 54);
-            border: 1px solid #fff;
-            border-radius: 2px;
-            cursor: pointer;
-        `
+        el.className = 'click-button-item'
         el.textContent = text
         if (typeof onclick === 'function') {
             el.addEventListener('click', onclick)
