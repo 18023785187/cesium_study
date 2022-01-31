@@ -8,6 +8,7 @@ const destroyHandler = { crrent: () => {} }
 /**
  * 处理上一个销毁，存储下一次销毁器
  * @param next () => void
+ * @returns undefined
  */
 function destroyPrev(next: () => {}): void {
     destroyHandler.crrent()

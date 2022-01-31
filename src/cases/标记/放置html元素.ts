@@ -12,16 +12,15 @@ import { Viewer, Cartesian2, Cartesian3, defined } from 'cesium'
 import { Destination } from '@/constants'
 
 export default () => {
-
     const viewer: Viewer = new Viewer('viewer')
     const dom: HTMLDivElement = document.createElement('div')
     dom.textContent = '点我'
     dom.style.cssText = `
-    position: absolute;
-    font-size: 30px;
-    font-weight: 700;
-    color: pink;
-`
+        position: absolute;
+        font-size: 30px;
+        font-weight: 700;
+        color: pink;
+    `
     dom.onclick = function () {
         alert('你好')
     }

@@ -1,5 +1,8 @@
 /**
     点击按钮
+    @param text string
+    @param onclick () => void | undefined
+    @returns ClickButton
 */
 class ClickButton {
     public el: HTMLDivElement

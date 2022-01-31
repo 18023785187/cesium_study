@@ -79,7 +79,7 @@ export default () => {
 
 <h4>学习资料</h4>
 <p><a href="https://cesium.com/learn/">Cesium 官方文档</a></p>
-<p><a href="https://cesium.com/learn/cesiumjs-learn/cesiumjs-flight-tracker/"></a>CesiumJS 教程</p>
+<p><a href="https://cesium.com/learn/cesiumjs-learn/"></a>CesiumJS 教程</p>
 <p><a href="https://cesium.com/learn/cesiumjs/ref-doc/">Cesium Api英文文档</a></p>
 <p><a href="http://cesium.xin/cesium/cn/Documentation1.62/">Cesium Api中文文档</a></p>
 <p><a href="https://sandcastle.cesium.com/">Cesium 案例</a></p>

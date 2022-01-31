@@ -15,18 +15,23 @@ type navDataItem = {
  */
 const caseAsyncScriptMap = {
     // 创建
+    // #region
     '普通的地球': () => import('@/cases/创建/普通的地球'),
     '纯粹的地球': () => import('@/cases/创建/纯粹的地球'),
     '生成建筑物': () => import('@/cases/创建/生成建筑物'),
     '地形': () => import('@/cases/创建/地形'),
+    // #endregion
     // 相机
+    // #region
     '飞到一个位置': () => import('@/cases/相机/飞到一个位置'),
     '打印某个地点的位置': () => import('@/cases/相机/打印某个地点的位置'),
     '飞到指定实体上': () => import('@/cases/相机/飞到指定实体上'),
     '缓动函数': () => import('@/cases/相机/缓动函数'),
     '锁定到某个点': () => import('@/cases/相机/锁定到某个点'),
     '围绕一个点运行': () => import('@/cases/相机/围绕一个点运行'),
+    // #endregion
     // 功能
+    // #region
     '动态时间': () => import('@/cases/功能/动态时间'),
     'CallbackProperty': () => import('@/cases/功能/CallbackProperty'),
     '飞行结束执行动画': () => import('@/cases/功能/飞行结束执行动画'),
@@ -36,7 +41,9 @@ const caseAsyncScriptMap = {
     '显示与隐藏实体': () => import('@/cases/功能/显示与隐藏实体'),
     '3D瓦砖功能样式': () => import('@/cases/功能/3D瓦砖功能样式'),
     '构建飞行跟踪器': () => import('@/cases/功能/构建飞行跟踪器'),
+    // #endregion
     // 材质
+    // #region
     '颜色': () => import('@/cases/材质/颜色'),
     '图片': () => import('@/cases/材质/图片'),
     '棋盘': () => import('@/cases/材质/棋盘'),
@@ -44,7 +51,9 @@ const caseAsyncScriptMap = {
     '网格': () => import('@/cases/材质/网格'),
     '发光的线': () => import('@/cases/材质/发光的线'),
     '带轮廓的线': () => import('@/cases/材质/带轮廓的线'),
+    // #endregion
     // 几何形状
+    // #region
     '点': () => import('@/cases/几何形状/点'),
     '画一条线': () => import('@/cases/几何形状/画一条线'),
     '各种线': () => import('@/cases/几何形状/各种线'),
@@ -57,21 +66,35 @@ const caseAsyncScriptMap = {
     '多边形': () => import('@/cases/几何形状/多边形'),
     '折线体': () => import('@/cases/几何形状/折线体'),
     '墙体': () => import('@/cases/几何形状/墙体'),
+    // #endregion
     // 标记
+    // #region
     '地图别针': () => import('@/cases/标记/地图别针'),
     '标签': () => import('@/cases/标记/标签'),
     '放置html元素': () => import('@/cases/标记/放置html元素'),
+    // #endregion
     // 3D模型
+    // #region
     '创建模型': () => import('@/cases/3D模型/创建模型'),
+    // #endregion
+    // 粒子系统
+    // #region
+    '创建粒子': () => import('@/cases/粒子系统/创建粒子'),
+    '粒子发射器': () => import('@/cases/粒子系统/粒子发射器'),
+    '烟花': () => import('@/cases/粒子系统/烟花粒子'),
+    // #endregion
     // 数据源
+    // #region
     'GeoJson和TopoJson': () => import('@/cases/数据源/GeoJson和TopoJson'),
     'Wmst': () => import('@/cases/数据源/Wmst'),
+    // #endregion
 }
 
 /**
  * Nav组件的数据
  */
 const navData: navDataItem[] = [
+    // 创建
     {
         title: '创建',
         data: [
@@ -93,6 +116,7 @@ const navData: navDataItem[] = [
             },
         ]
     },
+    // 相机
     {
         title: '相机',
         data: [
@@ -122,6 +146,7 @@ const navData: navDataItem[] = [
             }
         ]
     },
+    // 功能
     {
         title: '功能',
         data: [
@@ -163,6 +188,7 @@ const navData: navDataItem[] = [
             }
         ]
     },
+    // 材质
     {
         title: '材质',
         data: [
@@ -196,6 +222,7 @@ const navData: navDataItem[] = [
             }
         ]
     },
+    // 几何形状
     {
         title: '几何形状',
         data: [
@@ -249,6 +276,7 @@ const navData: navDataItem[] = [
             }
         ]
     },
+    // 标记
     {
         title: '标记',
         data: [
@@ -266,6 +294,25 @@ const navData: navDataItem[] = [
             }
         ]
     },
+    // 粒子系统
+    {
+        title: '粒子系统',
+        data: [
+            {
+                name: '创建粒子',
+                default: caseAsyncScriptMap['创建粒子']
+            },
+            {
+                name: '粒子发射器',
+                default: caseAsyncScriptMap['粒子发射器']
+            },
+            {
+                name: '烟花',
+                default: caseAsyncScriptMap['烟花']
+            }
+        ]
+    },
+    // 3D模型
     {
         title: '3D模型',
         data: [
@@ -275,6 +322,7 @@ const navData: navDataItem[] = [
             }
         ]
     },
+    // 数据源
     {
         title: '数据源',
         data: [

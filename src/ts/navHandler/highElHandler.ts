@@ -11,6 +11,11 @@ const highStyle = `
 // 存储上一个高亮的元素，在切换时去除其高亮色
 const highEl: { current?: HTMLElement } = { current: undefined }
 
+/**
+ * 替换当前高亮元素
+ * @param el HTMLElement
+ * @returns undefined
+ */
 function replace(el: HTMLElement): void {
     if (highEl.current === el) return
 

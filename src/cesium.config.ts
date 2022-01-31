@@ -1,3 +1,6 @@
+/**
+ * Cesium配置文件
+ */
 import { Ion } from 'cesium'
 import { ASSETS_TOKEN } from '@/constants'
 
