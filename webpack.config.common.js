@@ -152,7 +152,7 @@ module.exports = {
             'assets': '@/assets',
             'utils': '@/utils',
             'constants': '@/constants',
-            'case': '@/case',
+            'cases': '@/cases',
             'cesium': resolve(__dirname, 'node_modules/cesium')
         },
         extensions: ['.ts', '.js', '.json'],

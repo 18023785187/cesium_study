@@ -20,8 +20,8 @@
             "constants/*": [
                 "./src/constants/index.ts"
             ],
-            "case": [
-                "./src/case/*"
+            "cases": [
+                "./src/cases/*"
             ],
             "utils": [
                 "./src/utils/index.ts"

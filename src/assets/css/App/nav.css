@@ -31,6 +31,33 @@
     padding: 1vh;
     text-align: center;
     color: #fff;
+    cursor: help;
+}
+
+.app-nav-title:hover + .app-nav-toast,
+.app-nav-toast:hover {
+    visibility: visible;
+}
+
+.app-nav-toast {
+    visibility: hidden;
+    position: absolute;
+    z-index: 9999;
+    top: 4.5vh;
+    padding: 1vh 1vw;
+    background-color: rgb(40, 44, 52);
+    border: 1px solid #ccc;
+}
+
+.app-nav-toast::after {
+    content: '';
+    position: absolute;
+    top: -2vh;
+    left: 6vw;
+    border: 1vh solid #ccc;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent;
 }
 
 /* .case-list {

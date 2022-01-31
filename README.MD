@@ -21,7 +21,7 @@ $ npm run build
 <p>案例使用的语言是Typescript</p>
 <p>案例尽可能较多地添加详细的注释，方便读者理解</p>
 <p>在案例大纲中会有一些api的描述文件，写这些描述文件的初衷是对比官方网址的api更加简洁</p>
-<p>在src/assets/case中可以查看对应案例的源码</p>
+<p>在src/assets/cases中可以查看对应案例的源码</p>
 <p>在src/assets/image中可以查看对应案例的效果图</p>
 
 # 代码目录
@@ -31,7 +31,7 @@ public // 静态文件夹
 
 src: {
     assets, // 资源文件夹
-    case, // 案例文件夹
+    cases, // 案例文件夹
     constants, // 常量数据文件夹
     test, // 单元测试文件夹
     ts, // 处理代码文件夹
@@ -44,12 +44,12 @@ src: {
 
 # 案例
 
-    在src/assets/case中可以查看对应案例的源码，也可以添加自己写的案例
+    在src/assets/cases中可以查看对应案例的源码，也可以添加自己写的案例
 
 ```typescript
 /*
     如何扩展案例
-    在src/case 目录下新建一个大纲，如自定义
+    在src/cases 目录下新建一个大纲，如自定义
     在大纲目录下生成案例文件，如xxx.ts
 
     下面编写xxx.ts
