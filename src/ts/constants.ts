@@ -81,6 +81,8 @@ const caseAsyncScriptMap = {
     // #region
     '创建粒子': () => import('@/cases/粒子系统/创建粒子'),
     '粒子发射器': () => import('@/cases/粒子系统/粒子发射器'),
+    'ParticleBurst': () => import('@/cases/粒子系统/ParticleBurst'),
+    'updateCallback': () => import('@/cases/粒子系统/updateCallback'),
     '烟花': () => import('@/cases/粒子系统/烟花粒子'),
     // #endregion
     // 数据源
@@ -305,6 +307,14 @@ const navData: navDataItem[] = [
             {
                 name: '粒子发射器',
                 default: caseAsyncScriptMap['粒子发射器']
+            },
+            {
+                name: 'ParticleBurst',
+                default: caseAsyncScriptMap['ParticleBurst']
+            },
+            {
+                name: 'updateCallback',
+                default: caseAsyncScriptMap['updateCallback']
             },
             {
                 name: '烟花',

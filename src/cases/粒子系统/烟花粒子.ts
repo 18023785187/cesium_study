@@ -136,7 +136,7 @@ export default () => {
     `
     document.body.appendChild(greetEl)
     // #endregion
-    // 虎年祝福 end
+    // 虎年祝福 2022/1/31 end
 
     viewer.scene.camera.setView({
         destination: Cartesian3.fromDegrees(...Destination.LUO_DING, 60),

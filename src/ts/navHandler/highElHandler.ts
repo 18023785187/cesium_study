@@ -9,7 +9,8 @@ const highStyle = `
 `
 
 // 存储上一个高亮的元素，在切换时去除其高亮色
-const highEl: { current?: HTMLElement } = { current: undefined }
+let current: HTMLElement | undefined
+const highElMap: WeakMap<HTMLElement, HTMLElement> = new WeakMap()
 
 /**
  * 替换当前高亮元素
@@ -17,13 +18,19 @@ const highEl: { current?: HTMLElement } = { current: undefined }
  * @returns undefined
  */
 function replace(el: HTMLElement): void {
-    if (highEl.current === el) return
+    if (current) {
+        const prevEl: HTMLElement | undefined = highElMap.get(current)
+        if (prevEl === el) return
 
-    if (highEl.current) {
-        highEl.current.style.cssText = ''
+        if (prevEl) {
+            prevEl.style.cssText = ''
+        }
+        highElMap.delete(current)
     }
+
+    current = el
     el.style.cssText = highStyle
-    highEl.current = el
+    highElMap.set(current, el)
 }
 
 export default replace
