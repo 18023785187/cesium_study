@@ -4,6 +4,10 @@ import 'assets/css/base.css'
 
 import './ts/App'
 
+// 测试
+// import 'test/testClickButton'
+// import 'test/testRangeInput'
+
 if (process!.env!.NODE_ENV !== 'development') {
     console.log(
         `%c本网页为Cesium初学者提供案例效果展示,请在./src/cases目录下阅读相关案例的源码进行学习
@@ -11,3 +15,5 @@ if (process!.env!.NODE_ENV !== 'development') {
         `color: red;`
     )
 }
+
+document.body.style.display = 'block'

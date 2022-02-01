@@ -1,12 +1,12 @@
 /**
     点击按钮
-    @param text string
-    @param onclick () => void | undefined
+    @param text string  文本内容
+    @param onclick (e: MouseEvent) => void | undefined  绑定点击事件
     @returns ClickButton
 */
 class ClickButton {
     public el: HTMLDivElement
-    constructor(text: string, onclick?: () => void) {
+    constructor(text: string, onclick?: (ev: MouseEvent) => void) {
         const el = document.createElement('div')
         el.className = 'click-button-item'
         el.textContent = text
@@ -25,9 +25,7 @@ class ClickButton {
      * 在页面中删除该点击按钮
      */
     public remove(): void {
-        const { el } = this
-        const parentNode: ParentNode | null = el.parentNode   
-        parentNode && parentNode.removeChild(el)
+        this.el.remove()
     }
 }
 

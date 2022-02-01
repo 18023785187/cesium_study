@@ -1,0 +1,49 @@
+/*
+    滑块样式
+*/
+.range-input-item {
+    display: flex;
+    align-items: center;
+    width: 23vw;
+    min-width: 200px;
+    padding: var(--box-item-padding);
+    padding-left: 0;
+    padding-right: 0;
+    font-size: var(--box-item-font-size);
+    border: var(--box-item-border);
+    line-height: var(--box-item-line-height);
+    color: var(--box-item-color);
+    background-color: var(--box-item-background-color);
+}
+
+.range-input-item-text {
+    width: 5vw;
+    min-width: 35px;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.range-input-item-input {
+    width: 15vw;
+    min-width: 150px;
+}
+
+.range-input-item-input[type=range] {
+    height: .2vh;
+}
+
+.range-input-item-input[type=range]::-webkit-slider-thumb {
+    cursor: pointer;
+}
+
+.range-input-item-input[type=range]:focus {
+    outline: none;
+}
+
+.range-input-item-value {
+    width: 3vw;
+    min-width: 15px;
+    text-align: center;
+}
