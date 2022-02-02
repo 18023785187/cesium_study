@@ -10,7 +10,7 @@ optionsBox.style.cssText += `
         z-index: 9999;
         top: 0;
         left: 0;
-        margin: .3vh .8vw;
+        margin: .3vh;
     `
 optionsBox.className = 'options-box'
 

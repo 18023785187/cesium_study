@@ -90,11 +90,13 @@ export default () => {
 
 ```
 
-<h4>创建Cesium个人主页</h4>
+# 创建Cesium个人主页
+
 <p><a href="https://cesium.com/ion/assetdepot/">个人主页</a></p>
 <p>你可以在个人主页存放或添加一些资源用于你的Cesium项目, 可以获取AssetToken等</p>
 
-<h4>常用的api(不全)</h4>
+# 常用的api(不全)
+
 <ul>
 <strong>Entity</strong>
 
@@ -133,7 +135,9 @@ const options = {
 <strong>CallbackProperty</strong>
 <li>用于动画的api</li>
 </ul>
-<h4>常量(不全)</h4>
+
+# 常量(不全)
+
 <ul>
 <strong>Math 数学函数</strong>
 <li>toRadians(deg) 角度</li>
@@ -151,7 +155,8 @@ const options = {
 <li>fromDegreesArrayHeights (coordinates, ellipsoid , result) 转为带高度的经纬度数组</li>
 </ul>
 
-<h4>杂项</h4>
+# 杂项
+
 <ol>
 <li>cesium的使用需要对webpack进行配置（如果在module模式下），具体配置可在webpack.config.js中找到，已注释 cesium配置 x.</li>
 <li>cesium文件过大，每次编译都需要过长的时间，因此需要配置dll将cesium单独打包。注意：为了便于学习调试，请将process.env.NODE_ENV改为development且不要配置sourceMap（sourceMap生成的文件过大会影响编译速度）</li>

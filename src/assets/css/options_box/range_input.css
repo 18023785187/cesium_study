@@ -6,6 +6,7 @@
     align-items: center;
     width: 23vw;
     min-width: 200px;
+    margin-top: .3vh;
     padding: var(--box-item-padding);
     padding-left: 0;
     padding-right: 0;
