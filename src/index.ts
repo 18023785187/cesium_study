@@ -16,4 +16,5 @@ if (process!.env!.NODE_ENV !== 'development') {
     )
 }
 
-document.body.style.display = 'block'
+document.getElementById('app')!.style.display = 'flex'
+document.getElementById('loading')!.style.display = 'none'

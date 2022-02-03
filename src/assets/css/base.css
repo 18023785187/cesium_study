@@ -3,6 +3,8 @@
 @import url('./options_box/range_input.css');
 
 :root {
+    --color: #ccc;
+    --background-color: rgb(40, 44, 52);
     --scrollbar-border: 1px solid #444;
     --case-list-item-font-size: 1vw;
     --box-item-padding: .3vh .8vw;

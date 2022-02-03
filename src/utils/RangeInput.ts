@@ -46,6 +46,7 @@ class RangeInput {
             range.value = initialValue.toString()
         }
         valueShow.textContent = range.value
+        // 绑定数据更新
         range.addEventListener('input', () => valueShow.textContent = range.value)
         if (typeof oninput === 'function') {
             range.addEventListener('input', oninput)

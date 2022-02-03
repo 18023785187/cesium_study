@@ -2,7 +2,7 @@
  * 这是列表控制功能，可以切换case
  * 为nav组件添加内容和功能
  */
-import { navData, caseAsyncScriptMap } from '../constants'
+import { navData, caseAsyncScriptMap } from '../options'
 import { localStorageToken } from '@/constants'
 import destroyPrev from './destroy'
 import replace from './highElHandler'
@@ -32,6 +32,7 @@ for (let i = 0; i < navData.length; ++i) {
         if(curItemData.name === case_token) {
             replace(liEl)
         }
+        // 点击加载案例并进行处理工作
         liEl.addEventListener('click', () => {
             replace(liEl)
             const modules: Promise<any> = curItemData.default()

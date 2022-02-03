@@ -84,7 +84,7 @@ export default () => {
 }
 
 /**
- * 在src/ts/constants.ts 文件下的caseAsyncScriptMap和navData添加配置项，
+ * 在src/ts/options.ts 文件下的caseAsyncScriptMap和navData添加配置项，
  * 具体请前往该文件修改，源码并不复杂
 /
 

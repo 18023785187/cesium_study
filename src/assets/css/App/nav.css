@@ -4,13 +4,14 @@
     min-width: 100px;
     width: 15vw;
     height: 100vh;
-    color: #ccc;
-    background-color: rgb(40, 44, 52);
+    color: var(--color);
+    background-color: var(--background-color);
     overflow-y: scroll;
+    box-sizing: border-box;
 }
 
 .app-nav::-webkit-scrollbar {
-    background-color: rgb(40, 44, 52);
+    background-color: var(--background-color);
     border: var(--scrollbar-border);
     box-sizing: border-box;
 }
@@ -42,10 +43,10 @@
 .app-nav-toast {
     visibility: hidden;
     position: absolute;
-    z-index: 9999;
+    z-index: 99999;
     top: 4.5vh;
     padding: 1vh 1vw;
-    background-color: rgb(40, 44, 52);
+    background-color: var(--background-color);
     border: 1px solid #ccc;
 }
 
