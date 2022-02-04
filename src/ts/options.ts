@@ -33,6 +33,8 @@ const caseAsyncScriptMap = {
     // 功能
     // #region
     '动态时间': () => import('@/cases/功能/动态时间'),
+    '聚类': () => import('@/cases/功能/聚类'),
+    'HeadingPitchRoll':  () => import('@/cases/功能/HeadingPitchRoll'),
     'CallbackProperty': () => import('@/cases/功能/CallbackProperty'),
     '飞行结束执行动画': () => import('@/cases/功能/飞行结束执行动画'),
     '视频投影': () => import('@/cases/功能/视频投影'),
@@ -156,6 +158,14 @@ const navData: navDataItem[] = [
             {
                 name: '动态时间',
                 default: caseAsyncScriptMap['动态时间']
+            },
+            {
+                name: '聚类',
+                default: caseAsyncScriptMap['聚类']
+            },
+            {
+                name: 'HeadingPitchRoll',
+                default: caseAsyncScriptMap['HeadingPitchRoll']
             },
             {
                 name: 'CallbackProperty',

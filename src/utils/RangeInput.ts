@@ -1,3 +1,9 @@
+interface IRangeInput {
+    el: HTMLDivElement,
+    appendTo: (parentNode: Element | HTMLElement) => void,
+    remove: () => void
+}
+
 interface RangeInputOptions {
     min: number,
     max: number,
@@ -11,8 +17,8 @@ interface RangeInputOptions {
     @param oninput (e: MouseEvent) => void | undefined  绑定input事件
     @returns RangeInput
  */
-class RangeInput {
-    el: HTMLDivElement
+class RangeInput implements IRangeInput {
+    public el: HTMLDivElement
     constructor(
         text: string,
         options: RangeInputOptions,
@@ -32,6 +38,7 @@ class RangeInput {
         const span: HTMLSpanElement = document.createElement('span')
         span.className = 'range-input-item-text'
         span.textContent = text
+        span.title = text
         const range: HTMLInputElement = document.createElement('input')
         range.className = 'range-input-item-input'
         range.type = 'range'

@@ -1,0 +1,11 @@
+/*
+    描述信息
+*/
+.description-item {
+    min-width: 150px;
+    padding: var(--box-item-padding);
+    font-size: var(--box-item-font-size);
+    border: var(--box-item-border);
+    color: var(--box-item-color);
+    background-color: var(--box-item-background-color);
+}

@@ -19,7 +19,7 @@
 
 .range-input-item-text {
     width: 5vw;
-    min-width: 35px;
+    min-width: 50px;
     text-align: center;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -28,7 +28,7 @@
 
 .range-input-item-input {
     width: 15vw;
-    min-width: 150px;
+    min-width: 120px;
 }
 
 .range-input-item-input[type=range] {
@@ -44,7 +44,6 @@
 }
 
 .range-input-item-value {
-    width: 3vw;
-    min-width: 15px;
+    flex: 1;
     text-align: center;
 }

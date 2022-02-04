@@ -9,7 +9,7 @@
  *  模型可以在自己的资源中加载，也可以使用IonResource.fromAssetId({ AssetId })异步加载，
  *  IonResource.fromAssetId用法请看 src/case/创建/使用资源
  */
-import { Viewer, Cartesian3, Transforms, HeadingPitchRoll, Math, Quaternion, Entity } from 'cesium'
+import { Viewer, Cartesian3, Transforms, HeadingPitchRoll, Math, Quaternion, Entity, ConstantProperty } from 'cesium'
 import { ClickButton } from 'utils'
 import { Destination } from '@/constants'
 import CatModel from 'assets/3d_model/Cat.glb'
@@ -67,7 +67,7 @@ export default () => {
         // 创建模型实体
         const entity: Entity = viewer.entities.add({
             position: position,
-            orientation: orientation as any,
+            orientation: new ConstantProperty(orientation),
             // 模型
             model: {
                 // 模型的路径（.glb）

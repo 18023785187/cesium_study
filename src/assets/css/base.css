@@ -1,6 +1,7 @@
 @import url('./App/app.css');
 @import url('./options_box/click_button.css');
 @import url('./options_box/range_input.css');
+@import url('./options_box/description.css');
 
 :root {
     --color: #ccc;

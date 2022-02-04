@@ -1,10 +1,16 @@
+interface IClickButton {
+    el: HTMLDivElement,
+    appendTo: (parentNode: Element | HTMLElement) => void,
+    remove: () => void
+}
+
 /**
     点击按钮
     @param text string  文本内容
     @param onclick (e: MouseEvent) => void | undefined  绑定点击事件
     @returns ClickButton
 */
-class ClickButton {
+class ClickButton implements IClickButton {
     public el: HTMLDivElement
     constructor(text: string, onclick?: (ev: MouseEvent) => void) {
         const el = document.createElement('div')
