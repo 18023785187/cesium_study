@@ -2,7 +2,7 @@
  * 城市坐标
  */
 interface IDestination {
-    [propName: string]: [number, number]
+    readonly [propName: string]: [number, number]
 }
 
 /**

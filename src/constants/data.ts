@@ -5,9 +5,9 @@
  * 旧金山到哥本哈根的真实航班雷达点类型
  */
 type flightDataPointType = {
-    longitude: number,
-    latitude: number,
-    height: number
+    readonly longitude: number,
+    readonly latitude: number,
+    readonly height: number
 }
 
 /**

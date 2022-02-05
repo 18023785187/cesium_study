@@ -16,12 +16,12 @@ const destroyHandler: IDestroyHandler = { current: () => { } }
  * @param next () => void
  * @returns undefined
  */
-function destroyPrev(next: destroy): void {
+async function destroyPrev(next: destroy): Promise<void> {
     destroyHandler.current()
     if (typeof next === 'function') {
         destroyHandler.current = next
     } else {
-        (next as Promise<() => void>).then(destroyFunc => destroyHandler.current = destroyFunc)
+        destroyHandler.current = await next
     }
 }
 

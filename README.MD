@@ -82,6 +82,18 @@ export default () => {
        */
    }
 }
+// 以可以以异步的方式加载案例组件，这在数据异步载入时可以使用该方式
+export default async () => {
+    /*
+        案例代码
+    */
+
+   return () => {
+       /*
+            销毁时的处理函数
+       */
+   }
+}
 
 /**
  * 在src/ts/options.ts 文件下的caseAsyncScriptMap和navData添加配置项，

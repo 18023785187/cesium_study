@@ -1,4 +1,3 @@
-// navHandler
 /**
  * 销毁函数
  * @value () => void | Promise<() => void>
