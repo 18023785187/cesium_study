@@ -6,14 +6,15 @@ import { navData, caseAsyncScriptMap } from '../options'
 import { localStorageToken } from '@/constants'
 import destroyPrev from './destroy'
 import replace from './highElHandler'
+import type { moduleCases } from '../typings'
 
 // 获取上一次案例记录
 const case_token: string = window.localStorage.getItem(localStorageToken.CASE_TOKEN) || '普通的地球'
-caseAsyncScriptMap[case_token]().then((res: any) => destroyPrev(res.default()))
+caseAsyncScriptMap[case_token]().then((res: moduleCases) => destroyPrev(res.default()))
 
 // 获取导航元素
 const navEl: HTMLElement = document.getElementsByClassName('app-nav')[0] as HTMLElement
-// 渲染数据
+// 渲染数据，生成大纲
 for (let i = 0; i < navData.length; ++i) {
     const { title, data } = navData[i]
     const ulEl: HTMLUListElement = document.createElement('ul')
@@ -22,6 +23,7 @@ for (let i = 0; i < navData.length; ++i) {
     h4El.className += ' case-list-title'
     h4El.textContent = title
     ulEl.appendChild(h4El)
+    // 开始生成每个大纲的全部案例
     for (let i = 0; i < data.length; ++i) {
         const curItemData = data[i]
 
@@ -35,9 +37,10 @@ for (let i = 0; i < navData.length; ++i) {
         // 点击加载案例并进行处理工作
         liEl.addEventListener('click', () => {
             replace(liEl)
-            const modules: Promise<any> = curItemData.default()
+            // 拿到懒加载组件 { default: destroy }
+            const modules: Promise<moduleCases> = curItemData.default()
             modules
-                .then((res: any) => {
+                .then((res: moduleCases) => {
                     window.localStorage.setItem(localStorageToken.CASE_TOKEN, curItemData.name)
                     // 切换案例，执行前一个案例的销毁函数
                     destroyPrev(res.default())
