@@ -6,7 +6,7 @@ type navDataItem = {
     title: string,
     data: {
         name: string,
-        default: () => Promise<any>
+        default: () => Promise<unknown>
     }[]
 }
 

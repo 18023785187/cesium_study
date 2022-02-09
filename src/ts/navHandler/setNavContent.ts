@@ -44,7 +44,7 @@ for (let i = 0; i < navData.length; ++i) {
                 clickFlag = false
                 replace(liEl)
                 // 拿到懒加载组件 { default: destroy }
-                const modules: Promise<moduleCases> = curItemData.default()
+                const modules: Promise<moduleCases> = curItemData.default() as Promise<moduleCases>
                 modules
                     .then((res: moduleCases) => {
                         window.localStorage.setItem(localStorageToken.CASE_TOKEN, curItemData.name)
@@ -53,7 +53,7 @@ for (let i = 0; i < navData.length; ++i) {
                             clickFlag = true
                         })
                     })
-                    .catch((err: any) => {
+                    .catch((err: unknown) => {
                         alert('加载失败')
                     })
             }
