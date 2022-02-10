@@ -5,9 +5,9 @@
   "main": "index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dll": "webpack --config script/dll.js",
-    "build": "cross-env NODE_ENV=production webpack --config script/build.js",
-    "dev": "cross-env NODE_ENV=development webpack serve --config script/dev.js",
+    "dll": "webpack --config scripts/dll.js",
+    "build": "cross-env NODE_ENV=production webpack --config scripts/build.js",
+    "dev": "cross-env NODE_ENV=development webpack serve --config scripts/dev.js",
     "start": "npm run dev"
   },
   "keywords": ["cesium"],
