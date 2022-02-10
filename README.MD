@@ -6,7 +6,7 @@
 $ git clone https://github.com/18023785187/cesium_study.git
 $ npm install
 $ npm run dll
-$ npm run dev
+$ npm run dev 或 npm run start
 ```
 
 # 打包
